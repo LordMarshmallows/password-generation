@@ -31,8 +31,15 @@
         <ListBox FontSize="30" x:Name="passswordObservableCollection" Grid.Column="1" Grid.RowSpan="1" >
 
         </ListBox>
-        <ListBox FontSize="30" x:Name="passsswordObservableCollection" Grid.ColumnSpan="1" Grid.RowSpan="1" >
-
+        <ListBox FontSize="30" x:Name="pasvoList" Grid.ColumnSpan="1" Grid.RowSpan="1" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontSize="15" Height="40" Width="40" Text="{Binding Path=Sec}"></TextBlock>
+                        <TextBlock FontSize="15" Text="{Binding Path=Pa}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <Button  x:Name="but" Click="Button_Click" Margin="0,5,360,155" Grid.Column="1" Grid.Row="1"/>
         <Label Grid.Column="2" Grid.Row="2" Width="200" Height="30" HorizontalAlignment="Left" x:Name="labelpas"></Label>

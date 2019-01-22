@@ -23,19 +23,20 @@ namespace WpfApp20
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Pas> Pas { get; set; }
         public string pose;
         public int ch;
         public int Oi = 0;
-        ObservableCollection<string> passsword;
         ObservableCollection<string> password;
+      
         public MainWindow()
         {
-
+            Pas = new ObservableCollection<Pas> { };
             InitializeComponent();
+            pasvoList.ItemsSource = Pas;
             password = new ObservableCollection<string> {};
             passswordObservableCollection.ItemsSource = password;
-            passsword = new ObservableCollection<string> { };
-            passsswordObservableCollection.ItemsSource = passsword;
+          
 
             using (StreamReader sr = new StreamReader(@"D:\NSF\password generator\password.txt", System.Text.Encoding.Default))
             {
@@ -248,7 +249,7 @@ namespace WpfApp20
 
                     }
                     string value = String.Concat<char>(array);
-                    passsword.Add(value);
+                    Pas.Add(new Pas() { Sec = value, Pa = value });
 
 
 
@@ -371,7 +372,7 @@ namespace WpfApp20
         {
             int ch;
             string s = chislo.Text;
-            string pasword = "";
+          
             if (s != "")
             {
                 try
