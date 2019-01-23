@@ -23,22 +23,22 @@ namespace WpfApp20
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Pas> Pas { get; set; }
         public string pose;
         public int ch;
         public int Oi = 0;
+        ObservableCollection<string> passsword;
         ObservableCollection<string> password;
-      
         public MainWindow()
         {
-            Pas = new ObservableCollection<Pas> { };
-            InitializeComponent();
-            pasvoList.ItemsSource = Pas;
+            using (FileStream fstream = new FileStream(@"C:\Users\leroh\AppData\Roaming\password.txt", FileMode.OpenOrCreate))
+
+                InitializeComponent();
             password = new ObservableCollection<string> {};
             passswordObservableCollection.ItemsSource = password;
-          
+            passsword = new ObservableCollection<string> { };
+            passsswordObservableCollection.ItemsSource = passsword;
 
-            using (StreamReader sr = new StreamReader(@"D:\NSF\password generator\password.txt", System.Text.Encoding.Default))
+            using (StreamReader sr = new StreamReader(@"C:\Users\leroh\AppData\Roaming\password.txt", System.Text.Encoding.Default))
             {
                 string pas;
                 //  char[] array = new char[100];
@@ -249,7 +249,7 @@ namespace WpfApp20
 
                     }
                     string value = String.Concat<char>(array);
-                    Pas.Add(new Pas() { Sec = value, Pa = value });
+                    passsword.Add(value);
 
 
 
@@ -372,7 +372,7 @@ namespace WpfApp20
         {
             int ch;
             string s = chislo.Text;
-          
+       
             if (s != "")
             {
                 try
@@ -390,8 +390,10 @@ namespace WpfApp20
                     }
                     if ((ch1.IsChecked == true) & (ch2.IsChecked == true))
                     {
+                        
                         pose = GetUniqueKey(ch);
                         labelpas.Content = pose;
+                        
                     }
                     if ((ch1.IsChecked == true) & (ch2.IsChecked == false))
                     {
@@ -426,7 +428,7 @@ namespace WpfApp20
         private void Save_Click(object sender, RoutedEventArgs e)
         {
 
-            using (FileStream fstream = new FileStream(@"D:\NSF\password generator\password.txt", FileMode.OpenOrCreate))
+            using (FileStream fstream = new FileStream(@"C:\Users\leroh\AppData\Roaming\password.txt", FileMode.OpenOrCreate))
             {
                 var ar = pose.ToCharArray();
                 char[] buf = new char[pose.Length+1];
