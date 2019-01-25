@@ -13,3 +13,18 @@ C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.Generate
 C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.CoreCompileInputs.cache
 C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe
 C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.pdb
+D:\NSF\password generator\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe.config
+D:\NSF\password generator\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe
+D:\NSF\password generator\WpfApp20\WpfApp20\bin\Debug\WpfApp20.pdb
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csprojAssemblyReference.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\MainWindow.g.cs
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\App.g.cs
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.lref
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\MainWindow.baml
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.g.resources
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.Properties.Resources.resources
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.GenerateResource.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.CoreCompileInputs.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.pdb

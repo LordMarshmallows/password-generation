@@ -23,22 +23,269 @@ namespace WpfApp20
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Pas> Pas { get; set; }
         public string pose;
+        public string possave;
+        public string socsetsave;
+        public string[] pos;
+        public string [] socset;
+        public int x;
         public int ch;
         public int Oi = 0;
-        ObservableCollection<string> passsword;
         ObservableCollection<string> password;
+      
         public MainWindow()
         {
-            using (FileStream fstream = new FileStream(@"C:\Users\leroh\AppData\Roaming\password.txt", FileMode.OpenOrCreate))
-
-                InitializeComponent();
+            Pas = new ObservableCollection<Pas> { };
+            InitializeComponent();
+            pasvoList.ItemsSource = Pas;
             password = new ObservableCollection<string> {};
             passswordObservableCollection.ItemsSource = password;
-            passsword = new ObservableCollection<string> { };
-            passsswordObservableCollection.ItemsSource = passsword;
+          
 
-            using (StreamReader sr = new StreamReader(@"C:\Users\leroh\AppData\Roaming\password.txt", System.Text.Encoding.Default))
+            using (StreamReader sr = new StreamReader(@"D:\NSF\password generator\password.txt", System.Text.Encoding.Default))
+            {
+               
+                string pas;
+                //  char[] array = new char[100];
+                //sr.Read(array, 1, 11);
+                pas = sr.ReadToEnd();
+                String[] words = pas.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                // string[] words = pas.Split('▯');
+                int dl = pas.Length;
+                char[] array = new char[dl];
+                pos = new string[words.Length];
+                for (int j = 0; j < words.Length; j++)
+                {
+                   
+                    array = words[j].ToCharArray();
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        switch (array[i])
+                        {
+
+                            case 'z':
+                                array[i] = 'a';
+                                break;
+                            case 'a':
+                                array[i] = 'b';
+                                break;
+                            case 'q':
+                                array[i] = 'c';
+                                break;
+                            case 'w':
+                                array[i] = 'd';
+                                break;
+                            case 's':
+                                array[i] = 'e';
+                                break;
+                            case 'x':
+                                array[i] = 'f';
+                                break;
+                            case 'c':
+                                array[i] = 'g';
+                                break;
+                            case 'd':
+                                array[i] = 'h';
+                                break;
+                            case 'e':
+                                array[i] = 'i';
+                                break;
+                            case 'r':
+                                array[i] = 'j';
+                                break;
+                            case 'f':
+                                array[i] = 'k';
+                                break;
+                            case 'v':
+                                array[i] = 'l';
+                                break;
+                            case 'b':
+                                array[i] = 'm';
+                                break;
+                            case 'g':
+                                array[i] = 'n';
+                                break;
+                            case 't':
+                                array[i] = 'o';
+                                break;
+                            case 'y':
+                                array[i] = 'p';
+                                break;
+                            case 'h':
+                                array[i] = 'q';
+                                break;
+                            case 'n':
+                                array[i] = 'r';
+                                break;
+                            case 'm':
+                                array[i] = 's';
+                                break;
+                            case 'j':
+                                array[i] = 't';
+                                break;
+                            case 'i':
+                                array[i] = 'u';
+                                break;
+                            case 'u':
+                                array[i] = 'v';
+                                break;
+                            case 'k':
+                                array[i] = 'w';
+                                break;
+                            case 'l':
+                                array[i] = 'x';
+                                break;
+                            case 'o':
+                                array[i] = 'y';
+                                break;
+                            case 'p':
+                                array[i] = 'z';
+                                break;
+                            case 'P':
+                                array[i] = 'A';
+                                break;
+                            case 'O':
+                                array[i] = 'B';
+                                break;
+                            case 'L':
+                                array[i] = 'C';
+                                break;
+                            case 'K':
+                                array[i] = 'D';
+                                break;
+                            case 'I':
+                                array[i] = 'E';
+                                break;
+                            case 'U':
+                                array[i] = 'F';
+                                break;
+                            case 'J':
+                                array[i] = 'G';
+                                break;
+                            case 'M':
+                                array[i] = 'H';
+                                break;
+                            case 'N':
+                                array[i] = 'I';
+                                break;
+                            case 'H':
+                                array[i] = 'J';
+                                break;
+                            case 'Y':
+                                array[i] = 'K';
+                                break;
+                            case 'T':
+                                array[i] = 'L';
+                                break;
+                            case 'G':
+                                array[i] = 'M';
+                                break;
+                            case 'B':
+                                array[i] = 'N';
+                                break;
+                            case 'V':
+                                array[i] = 'O';
+                                break;
+                            case 'F':
+                                array[i] = 'P';
+                                break;
+                            case 'R':
+                                array[i] = 'Q';
+                                break;
+                            case 'E':
+                                array[i] = 'R';
+                                break;
+                            case 'D':
+                                array[i] = 'S';
+                                break;
+                            case 'C':
+                                array[i] = 'T';
+                                break;
+                            case 'X':
+                                array[i] = 'U';
+                                break;
+                            case 'S':
+                                array[i] = 'V';
+                                break;
+                            case 'Q':
+                                array[i] = 'W';
+                                break;
+                            case 'W':
+                                array[i] = 'X';
+                                break;
+                            case 'Z':
+                                array[i] = 'Y';
+                                break;
+                            case 'A':
+                                array[i] = 'Z';
+                                break;
+                            case '5':
+                                array[i] = '1';
+                                break;
+                            case '3':
+                                array[i] = '2';
+                                break;
+                            case '0':
+                                array[i] = '3';
+                                break;
+                            case '1':
+                                array[i] = '4';
+                                break;
+                            case '2':
+                                array[i] = '5';
+                                break;
+                            case '8':
+                                array[i] = '6';
+                                break;
+                            case '6':
+                                array[i] = '7';
+                                break;
+                            case '7':
+                                array[i] = '8';
+                                break;
+                            case '4':
+                                array[i] = '9';
+                                break;
+                            case '9':
+                                array[i] = '0';
+                                break;
+                        }
+
+                   
+                    }
+                   
+                    pos[j] = String.Concat<char>(array);
+
+
+
+
+
+
+                }
+             ;
+
+                // label.Content = words;
+                //  foreach (string s in words)
+                // {
+                //   
+                //     char[] array = new char[dl];
+
+                //    words[j] = String.Concat<char>(array);
+                //       if (s.Trim() != "▯")
+                // string value = String.Concat<char>(array);
+
+
+                // }
+
+
+                //    pas = String.Concat<char>(array);
+
+
+                //  string value = String.Concat<char>(array);
+                //   label.Content = value;
+            }
+            using (StreamReader sr = new StreamReader(@"D:\NSF\password generator\soc.txt", System.Text.Encoding.Default))
             {
                 string pas;
                 //  char[] array = new char[100];
@@ -46,11 +293,13 @@ namespace WpfApp20
                 pas = sr.ReadToEnd();
                 String[] words = pas.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                 // string[] words = pas.Split('▯');
+                int dl = pas.Length;
 
+                socset = new string[words.Length];
+                char[] array = new char[dl];
                 for (int j = 0; j < words.Length; j++)
                 {
-                    int dl = pas.Length;
-                    char[] array = new char[dl];
+                    
 
                     array = words[j].ToCharArray();
                     for (int i = 0; i < array.Length; i++)
@@ -246,10 +495,13 @@ namespace WpfApp20
                                 break;
                         }
 
-
+  
                     }
-                    string value = String.Concat<char>(array);
-                    passsword.Add(value);
+                   
+                        
+socset[j] = String.Concat<char>(array);
+                    
+                   
 
 
 
@@ -279,10 +531,10 @@ namespace WpfApp20
                 //  string value = String.Concat<char>(array);
                 //   label.Content = value;
             }
-
-
-
-        }
+            if (pos.Length != 0) { 
+            for (int i = 0; i < pos.Length-1; i++) { 
+            Pas.Add(new Pas() { Sec = socset[i], Pa = pos[i] });
+        }}}
         public static string GetUniqueKey(int maxSize)
         {
 
@@ -372,7 +624,7 @@ namespace WpfApp20
         {
             int ch;
             string s = chislo.Text;
-       
+          
             if (s != "")
             {
                 try
@@ -390,10 +642,8 @@ namespace WpfApp20
                     }
                     if ((ch1.IsChecked == true) & (ch2.IsChecked == true))
                     {
-                        
                         pose = GetUniqueKey(ch);
                         labelpas.Content = pose;
-                        
                     }
                     if ((ch1.IsChecked == true) & (ch2.IsChecked == false))
                     {
@@ -428,7 +678,217 @@ namespace WpfApp20
         private void Save_Click(object sender, RoutedEventArgs e)
         {
 
-            using (FileStream fstream = new FileStream(@"C:\Users\leroh\AppData\Roaming\password.txt", FileMode.OpenOrCreate))
+            using (FileStream fstream = new FileStream(@"D:\NSF\password generator\soc.txt", FileMode.OpenOrCreate))
+            {
+                var ar = sok.Text.ToCharArray();
+                char[] buf = new char[sok.Text.Length + 1];
+
+
+                for (int i = 0; i < ar.Length; i++)
+                {
+
+                    switch (ar[i])
+                    {
+                        case 'a':
+                            ar[i] = 'z';
+                            break;
+                        case 'b':
+                            ar[i] = 'a';
+                            break;
+                        case 'c':
+                            ar[i] = 'q';
+                            break;
+                        case 'd':
+                            ar[i] = 'w';
+                            break;
+                        case 'e':
+                            ar[i] = 's';
+                            break;
+                        case 'f':
+                            ar[i] = 'x';
+                            break;
+                        case 'g':
+                            ar[i] = 'c';
+                            break;
+                        case 'h':
+                            ar[i] = 'd';
+                            break;
+                        case 'i':
+                            ar[i] = 'e';
+                            break;
+                        case 'j':
+                            ar[i] = 'r';
+                            break;
+                        case 'k':
+                            ar[i] = 'f';
+                            break;
+                        case 'l':
+                            ar[i] = 'v';
+                            break;
+                        case 'm':
+                            ar[i] = 'b';
+                            break;
+                        case 'n':
+                            ar[i] = 'g';
+                            break;
+                        case 'o':
+                            ar[i] = 't';
+                            break;
+                        case 'p':
+                            ar[i] = 'y';
+                            break;
+                        case 'q':
+                            ar[i] = 'h';
+                            break;
+                        case 'r':
+                            ar[i] = 'n';
+                            break;
+                        case 's':
+                            ar[i] = 'm';
+                            break;
+                        case 't':
+                            ar[i] = 'j';
+                            break;
+                        case 'u':
+                            ar[i] = 'i';
+                            break;
+                        case 'v':
+                            ar[i] = 'u';
+                            break;
+                        case 'w':
+                            ar[i] = 'k';
+                            break;
+                        case 'x':
+                            ar[i] = 'l';
+                            break;
+                        case 'y':
+                            ar[i] = 'o';
+                            break;
+                        case 'z':
+                            ar[i] = 'p';
+                            break;
+                        case 'A':
+                            ar[i] = 'P';
+                            break;
+                        case 'B':
+                            ar[i] = 'O';
+                            break;
+                        case 'C':
+                            ar[i] = 'L';
+                            break;
+                        case 'D':
+                            ar[i] = 'K';
+                            break;
+                        case 'E':
+                            ar[i] = 'I';
+                            break;
+                        case 'F':
+                            ar[i] = 'U';
+                            break;
+                        case 'G':
+                            ar[i] = 'J';
+                            break;
+                        case 'H':
+                            ar[i] = 'M';
+                            break;
+                        case 'I':
+                            ar[i] = 'N';
+                            break;
+                        case 'J':
+                            ar[i] = 'H';
+                            break;
+                        case 'K':
+                            ar[i] = 'Y';
+                            break;
+                        case 'L':
+                            ar[i] = 'T';
+                            break;
+                        case 'M':
+                            ar[i] = 'G';
+                            break;
+                        case 'N':
+                            ar[i] = 'B';
+                            break;
+                        case 'O':
+                            ar[i] = 'V';
+                            break;
+                        case 'P':
+                            ar[i] = 'F';
+                            break;
+                        case 'Q':
+                            ar[i] = 'R';
+                            break;
+                        case 'R':
+                            ar[i] = 'E';
+                            break;
+                        case 'S':
+                            ar[i] = 'D';
+                            break;
+                        case 'T':
+                            ar[i] = 'C';
+                            break;
+                        case 'U':
+                            ar[i] = 'X';
+                            break;
+                        case 'V':
+                            ar[i] = 'S';
+                            break;
+                        case 'W':
+                            ar[i] = 'Q';
+                            break;
+                        case 'X':
+                            ar[i] = 'W';
+                            break;
+                        case 'Y':
+                            ar[i] = 'Z';
+                            break;
+                        case 'Z':
+                            ar[i] = 'A';
+                            break;
+                        case '1':
+                            ar[i] = '5';
+                            break;
+                        case '2':
+                            ar[i] = '3';
+                            break;
+                        case '3':
+                            ar[i] = '0';
+                            break;
+                        case '4':
+                            ar[i] = '1';
+                            break;
+                        case '5':
+                            ar[i] = '2';
+                            break;
+                        case '6':
+                            ar[i] = '8';
+                            break;
+                        case '7':
+                            ar[i] = '6';
+                            break;
+                        case '8':
+                            ar[i] = '7';
+                            break;
+                        case '9':
+                            ar[i] = '4';
+                            break;
+                        case '0':
+                            ar[i] = '9';
+                            break;
+
+                    }
+                    buf[i] = ar[i];
+                }
+
+                int f = buf.Length;
+                buf[f - 1] = ',';
+                fstream.Seek(0, SeekOrigin.End);
+                byte[] array = System.Text.Encoding.Default.GetBytes(buf);
+                fstream.Write(array, 0, array.Length);
+
+            }
+
+            using (FileStream fstream = new FileStream(@"D:\NSF\password generator\password.txt", FileMode.OpenOrCreate))
             {
                 var ar = pose.ToCharArray();
                 char[] buf = new char[pose.Length+1];
@@ -637,9 +1097,510 @@ namespace WpfApp20
                 fstream.Write(array, 0, array.Length);
 
             }
-        
+            using (StreamReader sr = new StreamReader(@"D:\NSF\password generator\password.txt", System.Text.Encoding.Default))
+            {
 
+                string pas;
+                //  char[] array = new char[100];
+                //sr.Read(array, 1, 11);
+                pas = sr.ReadToEnd();
+                String[] words = pas.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                // string[] words = pas.Split('▯');
+                int dl = pas.Length;
+                char[] array = new char[dl];
+                pos = new string[dl];
+                for (int j = 0; j < words.Length; j++)
+                {
+
+                    array = words[j].ToCharArray();
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        switch (array[i])
+                        {
+
+                            case 'z':
+                                array[i] = 'a';
+                                break;
+                            case 'a':
+                                array[i] = 'b';
+                                break;
+                            case 'q':
+                                array[i] = 'c';
+                                break;
+                            case 'w':
+                                array[i] = 'd';
+                                break;
+                            case 's':
+                                array[i] = 'e';
+                                break;
+                            case 'x':
+                                array[i] = 'f';
+                                break;
+                            case 'c':
+                                array[i] = 'g';
+                                break;
+                            case 'd':
+                                array[i] = 'h';
+                                break;
+                            case 'e':
+                                array[i] = 'i';
+                                break;
+                            case 'r':
+                                array[i] = 'j';
+                                break;
+                            case 'f':
+                                array[i] = 'k';
+                                break;
+                            case 'v':
+                                array[i] = 'l';
+                                break;
+                            case 'b':
+                                array[i] = 'm';
+                                break;
+                            case 'g':
+                                array[i] = 'n';
+                                break;
+                            case 't':
+                                array[i] = 'o';
+                                break;
+                            case 'y':
+                                array[i] = 'p';
+                                break;
+                            case 'h':
+                                array[i] = 'q';
+                                break;
+                            case 'n':
+                                array[i] = 'r';
+                                break;
+                            case 'm':
+                                array[i] = 's';
+                                break;
+                            case 'j':
+                                array[i] = 't';
+                                break;
+                            case 'i':
+                                array[i] = 'u';
+                                break;
+                            case 'u':
+                                array[i] = 'v';
+                                break;
+                            case 'k':
+                                array[i] = 'w';
+                                break;
+                            case 'l':
+                                array[i] = 'x';
+                                break;
+                            case 'o':
+                                array[i] = 'y';
+                                break;
+                            case 'p':
+                                array[i] = 'z';
+                                break;
+                            case 'P':
+                                array[i] = 'A';
+                                break;
+                            case 'O':
+                                array[i] = 'B';
+                                break;
+                            case 'L':
+                                array[i] = 'C';
+                                break;
+                            case 'K':
+                                array[i] = 'D';
+                                break;
+                            case 'I':
+                                array[i] = 'E';
+                                break;
+                            case 'U':
+                                array[i] = 'F';
+                                break;
+                            case 'J':
+                                array[i] = 'G';
+                                break;
+                            case 'M':
+                                array[i] = 'H';
+                                break;
+                            case 'N':
+                                array[i] = 'I';
+                                break;
+                            case 'H':
+                                array[i] = 'J';
+                                break;
+                            case 'Y':
+                                array[i] = 'K';
+                                break;
+                            case 'T':
+                                array[i] = 'L';
+                                break;
+                            case 'G':
+                                array[i] = 'M';
+                                break;
+                            case 'B':
+                                array[i] = 'N';
+                                break;
+                            case 'V':
+                                array[i] = 'O';
+                                break;
+                            case 'F':
+                                array[i] = 'P';
+                                break;
+                            case 'R':
+                                array[i] = 'Q';
+                                break;
+                            case 'E':
+                                array[i] = 'R';
+                                break;
+                            case 'D':
+                                array[i] = 'S';
+                                break;
+                            case 'C':
+                                array[i] = 'T';
+                                break;
+                            case 'X':
+                                array[i] = 'U';
+                                break;
+                            case 'S':
+                                array[i] = 'V';
+                                break;
+                            case 'Q':
+                                array[i] = 'W';
+                                break;
+                            case 'W':
+                                array[i] = 'X';
+                                break;
+                            case 'Z':
+                                array[i] = 'Y';
+                                break;
+                            case 'A':
+                                array[i] = 'Z';
+                                break;
+                            case '5':
+                                array[i] = '1';
+                                break;
+                            case '3':
+                                array[i] = '2';
+                                break;
+                            case '0':
+                                array[i] = '3';
+                                break;
+                            case '1':
+                                array[i] = '4';
+                                break;
+                            case '2':
+                                array[i] = '5';
+                                break;
+                            case '8':
+                                array[i] = '6';
+                                break;
+                            case '6':
+                                array[i] = '7';
+                                break;
+                            case '7':
+                                array[i] = '8';
+                                break;
+                            case '4':
+                                array[i] = '9';
+                                break;
+                            case '9':
+                                array[i] = '0';
+                                break;
+                        }
+
+                       
+                    }
+ possave = String.Concat<char>(array);
+
+
+
+
+
+
+
+                }
+     ;
+
+                // label.Content = words;
+                //  foreach (string s in words)
+                // {
+                //   
+                //     char[] array = new char[dl];
+
+                //    words[j] = String.Concat<char>(array);
+                //       if (s.Trim() != "▯")
+                // string value = String.Concat<char>(array);
+
+
+                // }
+
+
+                //    pas = String.Concat<char>(array);
+
+
+                //  string value = String.Concat<char>(array);
+                //   label.Content = value;
+            }
+            using (StreamReader sr = new StreamReader(@"D:\NSF\password generator\soc.txt", System.Text.Encoding.Default))
+            {
+                string pas;
+                //  char[] array = new char[100];
+                //sr.Read(array, 1, 11);
+                pas = sr.ReadToEnd();
+                String[] words = pas.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                // string[] words = pas.Split('▯');
+                int dl = pas.Length;
+
+                socset = new string[dl];
+                char[] array = new char[dl];
+                for (int j = 0; j < words.Length; j++)
+                {
+
+
+                    array = words[j].ToCharArray();
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        switch (array[i])
+                        {
+
+                            case 'z':
+                                array[i] = 'a';
+                                break;
+                            case 'a':
+                                array[i] = 'b';
+                                break;
+                            case 'q':
+                                array[i] = 'c';
+                                break;
+                            case 'w':
+                                array[i] = 'd';
+                                break;
+                            case 's':
+                                array[i] = 'e';
+                                break;
+                            case 'x':
+                                array[i] = 'f';
+                                break;
+                            case 'c':
+                                array[i] = 'g';
+                                break;
+                            case 'd':
+                                array[i] = 'h';
+                                break;
+                            case 'e':
+                                array[i] = 'i';
+                                break;
+                            case 'r':
+                                array[i] = 'j';
+                                break;
+                            case 'f':
+                                array[i] = 'k';
+                                break;
+                            case 'v':
+                                array[i] = 'l';
+                                break;
+                            case 'b':
+                                array[i] = 'm';
+                                break;
+                            case 'g':
+                                array[i] = 'n';
+                                break;
+                            case 't':
+                                array[i] = 'o';
+                                break;
+                            case 'y':
+                                array[i] = 'p';
+                                break;
+                            case 'h':
+                                array[i] = 'q';
+                                break;
+                            case 'n':
+                                array[i] = 'r';
+                                break;
+                            case 'm':
+                                array[i] = 's';
+                                break;
+                            case 'j':
+                                array[i] = 't';
+                                break;
+                            case 'i':
+                                array[i] = 'u';
+                                break;
+                            case 'u':
+                                array[i] = 'v';
+                                break;
+                            case 'k':
+                                array[i] = 'w';
+                                break;
+                            case 'l':
+                                array[i] = 'x';
+                                break;
+                            case 'o':
+                                array[i] = 'y';
+                                break;
+                            case 'p':
+                                array[i] = 'z';
+                                break;
+                            case 'P':
+                                array[i] = 'A';
+                                break;
+                            case 'O':
+                                array[i] = 'B';
+                                break;
+                            case 'L':
+                                array[i] = 'C';
+                                break;
+                            case 'K':
+                                array[i] = 'D';
+                                break;
+                            case 'I':
+                                array[i] = 'E';
+                                break;
+                            case 'U':
+                                array[i] = 'F';
+                                break;
+                            case 'J':
+                                array[i] = 'G';
+                                break;
+                            case 'M':
+                                array[i] = 'H';
+                                break;
+                            case 'N':
+                                array[i] = 'I';
+                                break;
+                            case 'H':
+                                array[i] = 'J';
+                                break;
+                            case 'Y':
+                                array[i] = 'K';
+                                break;
+                            case 'T':
+                                array[i] = 'L';
+                                break;
+                            case 'G':
+                                array[i] = 'M';
+                                break;
+                            case 'B':
+                                array[i] = 'N';
+                                break;
+                            case 'V':
+                                array[i] = 'O';
+                                break;
+                            case 'F':
+                                array[i] = 'P';
+                                break;
+                            case 'R':
+                                array[i] = 'Q';
+                                break;
+                            case 'E':
+                                array[i] = 'R';
+                                break;
+                            case 'D':
+                                array[i] = 'S';
+                                break;
+                            case 'C':
+                                array[i] = 'T';
+                                break;
+                            case 'X':
+                                array[i] = 'U';
+                                break;
+                            case 'S':
+                                array[i] = 'V';
+                                break;
+                            case 'Q':
+                                array[i] = 'W';
+                                break;
+                            case 'W':
+                                array[i] = 'X';
+                                break;
+                            case 'Z':
+                                array[i] = 'Y';
+                                break;
+                            case 'A':
+                                array[i] = 'Z';
+                                break;
+                            case '5':
+                                array[i] = '1';
+                                break;
+                            case '3':
+                                array[i] = '2';
+                                break;
+                            case '0':
+                                array[i] = '3';
+                                break;
+                            case '1':
+                                array[i] = '4';
+                                break;
+                            case '2':
+                                array[i] = '5';
+                                break;
+                            case '8':
+                                array[i] = '6';
+                                break;
+                            case '6':
+                                array[i] = '7';
+                                break;
+                            case '7':
+                                array[i] = '8';
+                                break;
+                            case '4':
+                                array[i] = '9';
+                                break;
+                            case '9':
+                                array[i] = '0';
+                                break;
+                        }
+
+                        
+                    }
+
+socsetsave = String.Concat<char>(array);
+
+
+
+
+
+
+                }
+             ;
+
+                // label.Content = words;
+                //  foreach (string s in words)
+                // {
+                //   
+                //     char[] array = new char[dl];
+
+                //    words[j] = String.Concat<char>(array);
+                //       if (s.Trim() != "▯")
+                // string value = String.Concat<char>(array);
+
+
+                // }
+
+
+                //    pas = String.Concat<char>(array);
+
+
+                //  string value = String.Concat<char>(array);
+                //   label.Content = value;
+            }
+           
+                Pas.Add(new Pas() { Sec = socsetsave, Pa = possave });
+
+
+            
+            }
+
+        private void PasvoList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
         
+            x=pasvoList.SelectedIndex;
+            if (x < pos.Length-1)
+            {
+                Clipboard.SetDataObject(pos[x]);
+            }
+            else
+            {
+                Clipboard.SetDataObject(possave);
+            }
         }
     }
  }
