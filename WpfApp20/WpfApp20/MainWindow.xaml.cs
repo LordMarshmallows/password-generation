@@ -532,7 +532,7 @@ socset[j] = String.Concat<char>(array);
                 //   label.Content = value;
             }
             if (pos.Length != 0) { 
-            for (int i = 0; i < pos.Length-1; i++) { 
+            for (int i = 0; i < pos.Length; i++) { 
             Pas.Add(new Pas() { Sec = socset[i], Pa = pos[i] });
         }}}
         public static string GetUniqueKey(int maxSize)
@@ -1593,14 +1593,25 @@ socsetsave = String.Concat<char>(array);
         {
         
             x=pasvoList.SelectedIndex;
-            if (x < pos.Length-1)
+            try
             {
                 Clipboard.SetDataObject(pos[x]);
             }
-            else
+            catch
             {
-                Clipboard.SetDataObject(possave);
+                try
+                {
+                    Clipboard.SetDataObject(possave);
+                }
+
+                catch { }
             }
+            dele.IsEnabled = true;
+            dele.Opacity = 100;
+        }
+
+        private void Dele_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
  }

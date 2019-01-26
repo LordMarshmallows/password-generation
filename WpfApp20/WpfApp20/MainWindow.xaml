@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp20"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Background="{x:Null}" Foreground="{x:Null}" WindowStyle="None">
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="labelpas">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)" Storyboard.TargetName="animation">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="gurtry2uty7uetu1ruei"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="nvc6itugf2dsgbkfdfd4"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="vq8c1rwqeiudsyl3gfhf"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="xcb9vdfu5gyeraqefcdc"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="cyxt2uiorf5bvcmsdvju"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="pofdig6pgfdf2ghi8sdx"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="3fdsafretf1shgjksvcs"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="qewrq6uchj3kaslgffs"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="uoigt2bfvbhkl6ihiuyo"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="animation">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="but">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="#FF004447">
         <Grid.RowDefinitions>
             <RowDefinition Height="209*"/>
             <RowDefinition Height="210*"/>
@@ -18,19 +51,17 @@
 
 
         <Label Width="200" Height="40" x:Name="label" Grid.Column="1" Margin="40,135,170,35" Grid.Row="1" />
-
+        <Button x:Name="dele" Opacity="20" IsEnabled="False" Width="30" Height="30" Grid.Column="1" Margin="135,51,245,129" Grid.Row="1" Click="Dele_Click" />
         <Canvas  Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Row="2">
 
-            <CheckBox x:Name="ch1"  Width="250" IsChecked="False"  Content="использовать заглавные буквы" Height="20" Canvas.Left="40" Canvas.Top="50"></CheckBox>
-            <CheckBox x:Name="ch2" IsChecked="False" Grid.ColumnSpan="1" Grid.RowSpan="2" Width="250" Content="использовать  цифры" Height="20" Canvas.Left="40" Canvas.Top="80"></CheckBox>
-            <TextBox x:Name="chislo" Canvas.Left="40" Width="100" Canvas.Top="120" TextChanged="TextBox_TextChanged"></TextBox>
-            <TextBox x:Name="sok" Canvas.Left="40" Width="100" Canvas.Top="138" TextChanged="TextBox_TextChanged"></TextBox>
+            <CheckBox x:Name="ch1"  Width="250" IsChecked="False"  Content="использовать заглавные буквы" Height="20" Canvas.Left="272" Canvas.Top="90"></CheckBox>
+            <CheckBox x:Name="ch2" IsChecked="False" Grid.ColumnSpan="1" Grid.RowSpan="2" Width="250" Content="использовать  цифры" Height="20" Canvas.Left="272" Canvas.Top="69"></CheckBox>
+            <TextBox x:Name="chislo" Canvas.Left="272" Width="40" Canvas.Top="113" TextChanged="TextBox_TextChanged" Height="18"></TextBox>
+            <TextBox x:Name="sok" Canvas.Left="272" Width="227.333" Canvas.Top="141" TextChanged="TextBox_TextChanged" Height="19"></TextBox>
 
         </Canvas>
-        <ListBox FontSize="30" x:Name="passswordObservableCollection" Grid.Column="1" Grid.RowSpan="1" >
-
-        </ListBox>
-        <ListBox FontSize="30" x:Name="pasvoList" Grid.ColumnSpan="1" Grid.RowSpan="1" SelectionChanged="PasvoList_SelectionChanged" >
+        <ListBox FontSize="30" x:Name="passswordObservableCollection" Grid.Column="1" Grid.RowSpan="1" Visibility="Collapsed" />
+        <ListBox FontSize="30" x:Name="pasvoList" Grid.ColumnSpan="1" Grid.RowSpan="1" SelectionChanged="PasvoList_SelectionChanged" Visibility="Collapsed" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -40,8 +71,9 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button  x:Name="but" Click="Button_Click" Margin="0,5,360,155" Grid.Column="1" Grid.Row="1"/>
-        <Label Grid.Column="2" Grid.Row="2" Width="200" Height="30" HorizontalAlignment="Left" x:Name="labelpas"></Label>
-        <Button x:Name="save" Grid.Column="1" Grid.Row="1" Width="40" Height="40" Click="Save_Click" Margin="200,90,170,80"></Button>
+        <Button  x:Name="but" Click="Button_Click" Margin="272,5,-111,161" Grid.Row="1" Width="225" Height="59"/>
+        <Label Height="78" x:Name="labelpas" Margin="100,0,100,22.231" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Content="" FontSize="50.667" HorizontalAlignment="Center"/>
+        <Button x:Name="save" Grid.Column="1" Grid.Row="1" Width="40" Height="40" Click="Save_Click" Margin="120.07,5.768,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="50.667"/>
+        <Label Height="78" x:Name="animation" Margin="150,0,150,21.231" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Content="sdfasdfadsfdasfasdfs" FontSize="48" HorizontalAlignment="Center" Visibility="Collapsed"/>
     </Grid>
 </Window>
