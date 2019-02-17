@@ -1,0 +1,69 @@
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe.config
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\bin\Debug\WpfApp20.pdb
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csprojAssemblyReference.cache
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\MainWindow.g.cs
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\App.g.cs
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.cache
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.lref
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\MainWindow.baml
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.g.resources
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.Properties.Resources.resources
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.GenerateResource.cache
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.CoreCompileInputs.cache
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.pdb
+D:\NSF\password generator\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe.config
+D:\NSF\password generator\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe
+D:\NSF\password generator\WpfApp20\WpfApp20\bin\Debug\WpfApp20.pdb
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csprojAssemblyReference.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\MainWindow.g.cs
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\App.g.cs
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.lref
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\MainWindow.baml
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.g.resources
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.Properties.Resources.resources
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.GenerateResource.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.CoreCompileInputs.cache
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe
+D:\NSF\password generator\WpfApp20\WpfApp20\obj\Debug\WpfApp20.pdb
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe.manifest
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\bin\Debug\WpfApp20.application
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe.manifest
+C:\Users\leroh\Source\Repos\WpfApp20\WpfApp20\obj\Debug\WpfApp20.application
+E:\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe.config
+E:\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe.manifest
+E:\WpfApp20\WpfApp20\bin\Debug\WpfApp20.application
+E:\WpfApp20\WpfApp20\bin\Debug\WpfApp20.exe
+E:\WpfApp20\WpfApp20\bin\Debug\WpfApp20.pdb
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csprojAssemblyReference.cache
+E:\WpfApp20\WpfApp20\obj\Debug\MainWindow.g.cs
+E:\WpfApp20\WpfApp20\obj\Debug\App.g.cs
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.cache
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20_MarkupCompile.lref
+E:\WpfApp20\WpfApp20\obj\Debug\MainWindow.baml
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.g.resources
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.Properties.Resources.resources
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.GenerateResource.cache
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.CoreCompileInputs.cache
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe.manifest
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.application
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.exe
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.pdb
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignColors.dll
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignColors.pdb
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\WpfApp20\WpfApp20\obj\Debug\WpfApp20.csproj.CopyComplete
+E:\WpfApp20\WpfApp20\obj\Debug\App.baml
+E:\WpfApp20\WpfApp20\bin\Debug\ControlzEx.dll
+E:\WpfApp20\WpfApp20\bin\Debug\MahApps.Metro.dll
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignThemes.MahApps.dll
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignXaml.DialogsHelper.dll
+E:\WpfApp20\WpfApp20\bin\Debug\System.Windows.Interactivity.dll
+E:\WpfApp20\WpfApp20\bin\Debug\ControlzEx.pdb
+E:\WpfApp20\WpfApp20\bin\Debug\MahApps.Metro.pdb
+E:\WpfApp20\WpfApp20\bin\Debug\MahApps.Metro.xml
+E:\WpfApp20\WpfApp20\bin\Debug\MaterialDesignXaml.DialogsHelper.pdb
